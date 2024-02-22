@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vegan Store</title>
+  <link rel="stylesheet" href="/Resources/css/style.css">
+  <script src="https://kit.fontawesome.com/63554bb051.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <img id="header-logo" src="/Resources/images/Vegan_logo.png" alt="header logo">
+
+    <nav class="navigation">
+      <a href="#about">About Us</a>
+      <a href="#categories">Categories</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact Us</a>
+
+      <button class="header-btn">Log In</button>
+    </nav>
+  </header>
+
+
+  <main>
+    <section id="about">
+      <h2>Vegan Store</h2>
+      <p>We are a vegan store that is committed to providing high-quality, plant-based products to our customers. Our
+        mission is to promote a healthy and sustainable lifestyle that benefits both the individual and the environment.
+      </p>
+    </section>
+
+
+    <section id="categories">
+      <h1>Categories</h1>
+      <ul>
+        <li>
+          <img src="/Resources/images/main_NonDairy_Milk.jpg" alt="Non-Dairy Milk">
+          <h3>Non-Dairy Milk</h3>
+          <p>Non-dairy milk is a sustainable and ethical choice that can provide a tasty and nutritious alternative to
+            dairy milk.</p>
+          <a href="/Resources/Products/Non-Dairy_Milk.html">View</a>
+        </li>
+        <li>
+          <img src="/Resources/images/main_Plant_based_Meat_Alternatives.jpg" alt="Plant-based_Meat_Alternatives">
+          <h3>Plant-based Meat Alternatives</h3>
+          <p>Plant-based meat alternatives can help to reduce our carbon footprint and mitigate the environmental impact
+            of animal agriculture.</p>
+          <a href="/Resources/Products/Plant-based_Meat_Alternatives.html">View</a>
+        </li>
+        <li>
+          <img src="/Resources/images/main_Vegan_Snacks_&_Treats.jpg" alt="Vegan_Snacks_and_Treats">
+          <h3>Vegan Snacks and Treats</h3>
+          <p>Vegan snacks and treats can offer a guilt-free indulgence while promoting a cruelty-free and
+            environmentally friendly lifestyle.
+          </p>
+          <a href="/Resources/Products/Vegan_Snacks_and_Treats.html">View</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- <section id="products">
+      <h2>Products</h2>
+      <ul>
+        <li><a href="/Products/Vegan_Protein_Powders.html">Vegan protein powders</a></li>
+        <li><a href="/Products/Plant-based_Meat_Alternatives.html">Plant-based meat alternatives</a></li>
+        <li><a href="/Products/Non-Dairy_Milk.html">Non-dairy milk</a></li>
+        <li><a href="/Products/Vegan_Snacks_and_Treats.html">Vegan snacks and treats</a></li>
+      </ul>
+    </section> -->
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <ul>
+        <li><a href="/Resources/Blogs/Blog1.html">Why a vegan diet is good for the environment</a></li>
+        <li><a href="/Resources/Blogs/Blog2.html">The health benefits of a plant-based lifestyle</a></li>
+        <li><a href="/Resources/Blogs/Blog3.html">Vegan meal prep ideas</a></li>
+      </ul>
+    </section>
+
+
+    <section id="contact">
+      <div id="section-1">
+        <h5>Contact Us</h5>
+        <h1>Address Information</h1>
+        <p>Overeating is one of the most common causes of overweight and digestive problems.</p>
+
+        <h4>Your Vegan Store</h4>
+        <ul>
+          <li>We Vegan Office</li>
+          <li>Opposite Old Bus Stop</li>
+          <li>Main Road, Sindewahi</li>
+          <li>Monday to Friday : 9am to 8pm</li>
+        </ul>
+
+        <h4>Your Vegan Store</h4>
+        <ul>
+          <li>2nd floor, Opposite durga mata mandir</li>
+          <li>Chota Bangali Camp</li>
+          <li>Bhiwapur ward, Chandrapur</li>
+          <li>Monday to Friday : 9am to 8pm</li>
+        </ul>
+      </div>
+
+      <form id="section-2" action="#" onsubmit="saveData(); return false;">
+        <div>
+          <h5>Meet Our Team</h5>
+          <h1>Get In Touch</h1>
+          <p>The task of proper nutrition - to remove from the diet harmful food and enrich it useful.</p>
+
+          <input type="text" name="Name" placeholder="Name" class="input" id="name" required>
+          <input type="number" name="PhoneNumber" placeholder="Phone" class="input" maxlength="10" id="number" required>
+          <input type=" text" name="Subject" placeholder="Subject" class="input" id="subject" required>
+          <input type="email" name="E-mail" placeholder="E-mail" class="input" id="mail" required>
+
+          <textarea style="resize: none;" placeholder="Message" cols="30" rows="10" id="message"></textarea>
+
+          <button type="submit">SUBMIT NOW</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2022 Vegan Store.</p>
+  </footer>
+
+  <script>
+
+    function saveData() {
+      // Get form values
+      var name = document.getElementById('name').value;
+      var phone = document.getElementById('number').value;
+      var subject = document.getElementById('subject').value;
+      var email = document.getElementById('mail').value;
+      var message = document.getElementById('message').value;
+
+      // Create an object to store the form data
+      var formData = {
+        name: name,
+        phone: phone,
+        subject: subject,
+        email: email,
+        message: message
+      };
+
+      // Convert the object to a JSON string
+      var jsonData = JSON.stringify(formData);
+
+      // Save the JSON string in localStorage
+      localStorage.setItem('formData', jsonData);
+
+      // Alert the user that data has been saved (you can customize this part)
+      alert('Data saved successfully!');
+    }
+  </script>
+</body>
+
+</html>
