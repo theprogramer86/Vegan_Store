@@ -135,7 +135,7 @@ header button:hover {
 /* about section */
 
 main #about {
-  background-image:url('../images/background_image_about.png');
+  background-image:url(../images/background_image_about.png);
   background-size: cover;
   padding: 13rem 0;
   text-align: center;
